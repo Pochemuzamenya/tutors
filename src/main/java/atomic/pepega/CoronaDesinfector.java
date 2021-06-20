@@ -2,8 +2,10 @@ package atomic.pepega;
 
 public class CoronaDesinfector {
 
-    private Announcer announcer = ObjectFactory.getInstance().createObject(Announcer.class);
-    private Policeman policeman = ObjectFactory.getInstance().createObject(Policeman.class);
+    @InjectByType
+    private Announcer announcer;
+    @InjectByType
+    private Policeman policeman;
 
     public void start(Room room){
         announcer.announce("Начинаеим дезинфекцию, все вон!");
@@ -13,6 +15,6 @@ public class CoronaDesinfector {
     }
 
     private void desinfect(Room room) {
-        System.out.println("Корона говно");
+        System.out.println("Корона уходи");
     }
 }
